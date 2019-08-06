@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Loterias</string>
+
+
+    <string name="duplasena">DuplaSena</string>
+    <string name="lotofacil">Lotofácil</string>
+    <string name="lotomania">Lotomania</string>
+    <string name="megasena">MegaSena</string>
+    <string name="quina">Quina</string>
+    <string name="timemania">Timemania</string>
+    <string name="dia_de_sorte">Dia de Sorte</string>
+
+    <string name="primeiro_sorteio">Primeiro sorteio:</string>
+    <string name="segundo_sorteio">Segundo Sorteio:</string>
+    <string name="primeiro_sorteio_caps">PRIMEIRO SORTEIO</string>
+    <string name="segundo_sorteio_caps">SEGUNDO SORTEIO</string>
+
+    <string name="numero_do_concurso">Concurso:</string>
+
+    <string name="ganhadores">Ganhadores:</string>
+    <string name="valor_da_premicao">Valor da premiação:</string>
+
+    <string name="sena">Sena</string>
+    <string name="quadra">Quadra</string>
+    <string name="terno">Terno</string>
+    <string name="duque">Duque</string>
+
+    <string name="proximo_sorteio">Próximo sorteio</string>
+
+
+    <string name="vinte_acertos">Vinte acertos</string>
+    <string name="dezenove_acertos">Dezenove acertos</string>
+    <string name="dezoito_acertos">Dezoito acertos</string>
+    <string name="dezessete_acertos">Dezessete acertos</string>
+    <string name="dezesseis_acertos">Dezesseis acertos</string>
+    <string name="quinze_acertos">Quinze acertos</string>
+    <string name="quatorze_acertos">Quatorze acertos</string>
+    <string name="treze_acertos">Treze acertos</string>
+    <string name="doze_acertos">Doze acertos</string>
+    <string name="onze_acertos">Onze acertos</string>
+
+    <string name="sete_acertos">Sete acertos</string>
+    <string name="seis_acertos">Seis acertos</string>
+    <string name="cinco_acertos">Cinco acertos</string>
+    <string name="quatro_acertos">Quatro acertos</string>
+    <string name="tres_acertos">Três acertos</string>
+
+    <string name="zero_acertos">Zero acertos</string>
+
+
+    <string name="m_s_sorteado">Mês sorteado:</string>
+    <string name="m_s_da_sorte">Mês da sorte</string>
+
+    <string name="tel_ouvidoria">0800 725 7474</string>
+    <string name="ouvidoria">Ouvidoria Caixa</string>
+
+    <string name="localizar_lote">Localizar uma lotérica</string>
+    <string name="acessar_site_loterias">Acessar Site Loterias</string>
+
+    <string name="loterica">LOTERICA</string>
+
+
+
+</resources>

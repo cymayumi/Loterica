@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0B085C</color>
+    <color name="colorPrimaryDark">#626166</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="mega">#088A68</color>
+    <color name="facil">#610B5E</color>
+    <color name="quina">#210B61</color>
+    <color name="mania">#DF7401</color>
+    <color name="dia">#B18904</color>
+    <color name="dupla">#B40431</color>
+    <color name="time">#FFFF00</color>
+    <color name="loto">#FF0000</color>
+    <color name="gol">#2E64FE</color>
+    <color name="white">#FFFFFF</color>
+</resources>

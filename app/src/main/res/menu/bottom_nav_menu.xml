@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigation_jogos"
+            android:icon="@drawable/ic_style_black_24dp"
+            android:title="Loterias"/>
+
+    <item
+            android:id="@+id/navigation_resultados"
+            android:icon="@drawable/ic_local_play_black_24dp"
+            android:title="Resultados"/>
+
+    <item
+            android:id="@+id/navigation_info"
+            android:icon="@drawable/ic_info_outline_black_24dp"
+            android:title="Informações"/>
+
+</menu>

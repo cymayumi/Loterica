@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_height="match_parent"
+             android:layout_width="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+    <ImageView
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/viasorte"
+            android:id="@+id/iv_loterica"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/loterica"/>
+    <Button
+            android:text="@string/acessar_site_loterias"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_site"
+            android:background="@drawable/borda_results"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center_horizontal"
+    />
+    <Button
+            android:text="@string/localizar_lote"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_loterica"
+            android:background="@drawable/borda_results"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="64dp"
+            android:layout_gravity="center_horizontal"
+    />
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="100dp"
+                  android:padding="10dp">
+
+        <TextView
+                android:text="@string/ouvidoria"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textSize="18sp"
+                android:textAlignment="center"
+        />
+        <TextView
+                android:text="@string/tel_ouvidoria"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textSize="14sp"
+                android:textAlignment="center"/>
+    </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

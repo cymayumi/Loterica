@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:background="@drawable/borda_results_2">
+            <TextView
+                    android:text="@string/lotomania"
+                    android:textSize="25sp"
+                    android:background="@drawable/borda_results"
+                    android:backgroundTint="@color/mania"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/numero_do_concurso"
+                        android:textSize="20sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_num_concurso"
+                        tools:text="0000"
+                        android:gravity="center_horizontal"
+                        android:textSize="20sp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/tv_cidade_concurso"
+                    tools:text="São Paulo - SP"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="5dp"
+                          android:gravity="center">
+
+                <TextView
+                        android:id="@+id/tv_1"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_2"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_3"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_4"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_5"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_6"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_7"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_8"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="5dp"
+                          android:gravity="center">
+
+                <TextView
+                        android:id="@+id/tv_9"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_10"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_11"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_12"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_13"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_14"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_15"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_16"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="5dp"
+                          android:gravity="center">
+                <TextView
+                        android:id="@+id/tv_17"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_18"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/tv_19"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_20"
+                        tools:text="01"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/borda_results_2"
+                        android:backgroundTint="@color/mania"
+                        android:layout_width="wrap_content"
+                        android:padding="3dp"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:padding="8dp"
+                      android:layout_marginTop="5dp"
+                      android:background="@drawable/borda_results_2">
+
+            <TextView
+                    android:text="@string/vinte_acertos"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/ganhadores"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_ganhadores_20"
+                        tools:text="1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/valor_da_premicao"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_valor_20"
+                        tools:text="10.000.000"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                    android:text="@string/dezenove_acertos"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/ganhadores"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_ganhadores_19"
+                        tools:text="1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/valor_da_premicao"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_valor_19"
+                        tools:text="10.000.000"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                    android:text="@string/dezoito_acertos"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/ganhadores"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_ganhadores_18"
+                        tools:text="1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/valor_da_premicao"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_valor_18"
+                        tools:text="10.000.000"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                    android:text="@string/dezessete_acertos"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/ganhadores"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_ganhadores_17"
+                        tools:text="1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/valor_da_premicao"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_valor_17"
+                        tools:text="10.000.000"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                    android:text="@string/dezesseis_acertos"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/ganhadores"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_ganhadores_16"
+                        tools:text="1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/valor_da_premicao"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_valor_16"
+                        tools:text="10.000.000"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                    android:text="@string/quinze_acertos"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/ganhadores"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_ganhadores_15"
+                        tools:text="1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/valor_da_premicao"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_valor_15"
+                        tools:text="10.000.000"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                    android:text="@string/zero_acertos"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/ganhadores"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_ganhadores_00"
+                        tools:text="1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:text="@string/valor_da_premicao"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_valor_00"
+                        tools:text="10.000.000"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:background="@drawable/borda_results_2"
+                      android:padding="8dp"
+                      android:layout_marginTop="5dp">
+
+            <TextView
+                    android:text="@string/proximo_sorteio"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:padding="8dp">
+
+                <TextView
+                        android:id="@+id/tv_valor_proximo"
+                        tools:text="10.000.000"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tv_data"
+                        tools:text="...."
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
