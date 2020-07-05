@@ -16,11 +16,19 @@ import retrofit2.Callback
 import retrofit2.Response
 import com.mayumi.loterica.util.formatar
 import android.R.string.cancel
+import kotlinx.coroutines.*
 
 
 class MegaFrag : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    private val viewModelJob = Job()
+    private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(com.mayumi.loterica.R.layout.mega_fragment, container, false)
     }
 
@@ -38,51 +46,41 @@ class MegaFrag : Fragment() {
         resultadoMega()
     }
 
+
     private fun resultadoMega() {
-        val destinationService = ServiceBuilder.buildService(WebAPI::class.java)
-        val requestCall = destinationService.resultMega()
-
-        requestCall.enqueue(object : Callback<Mega> {
-
-            override fun onResponse(call: Call<Mega>, response: Response<Mega>) {
-
-                if (isAdded && response.isSuccessful) {
-                    val result = response.body()!!
-                    tv_num_concurso.text = result.concurso.numero
-                    tv_cidade_concurso.text = result.concurso.cidade
-
-                    tv_ganhadores_sena.text = result.concurso.premiacao.sena.ganhadores
-                    tv_valor_sena.text = result.concurso.premiacao.sena.valor_pago
-
-                    tv_ganhadores_quina.text = result.concurso.premiacao.quina.ganhadores
-                    tv_valor_quina.text = result.concurso.premiacao.quina.valor_pago
-
-                    tv_valor_quadra.text = result.concurso.premiacao.quadra.valor_pago
-                    tv_ganhadores_quadra.text = result.concurso.premiacao.quadra.ganhadores
-
-                    tv_valor_proximo.text = result.proximo_concurso.valor_estimado
-                    tv_data.text = result.proximo_concurso.data
-
-
-                    val dezenas = result.concurso.dezenas
-
-                    tv_1.text = formatar(dezenas[0].toString())
-                    tv_2.text = formatar(dezenas[1].toString())
-                    tv_3.text = formatar(dezenas[2].toString())
-                    tv_4.text = formatar(dezenas[3].toString())
-                    tv_5.text = formatar(dezenas[4].toString())
-                    tv_6.text = formatar(dezenas[5].toString())
-                }
+        uiScope.launch {
+            val response = withContext(Dispatchers.IO) {
+                val destinationService = ServiceBuilder.buildService(WebAPI::class.java)
+                return@withContext destinationService.resultMega()
             }
 
-            override fun onFailure(call: Call<Mega>, t: Throwable) {
-                if (isAdded) {
-                    Toast.makeText(context, "Ocorreu um erro!", Toast.LENGTH_LONG).show()
-                }
+            if (response.isSuccessful) {
+                val result = response.body()!!
+
+                tv_num_concurso.text = result.numero_concurso
+                tv_cidade_concurso.text = result.local_realizacao
+
+                val dezenas = result.dezenas
+                tv_1.text = formatar(dezenas[0].toString())
+                tv_2.text = formatar(dezenas[1].toString())
+                tv_3.text = formatar(dezenas[2].toString())
+                tv_4.text = formatar(dezenas[3].toString())
+                tv_5.text = formatar(dezenas[4].toString())
+                tv_6.text = formatar(dezenas[5].toString())
+
+                tv_ganhadores_sena.text = result.premiacao[0].quantidade_ganhadores
+                tv_ganhadores_quina.text = result.premiacao[1].quantidade_ganhadores
+                tv_ganhadores_quadra.text = result.premiacao[2].quantidade_ganhadores
+
+                tv_valor_sena.text = result.premiacao[0].valor_total
+                tv_valor_quina.text = result.premiacao[1].valor_total
+                tv_valor_quadra.text = result.premiacao[2].valor_total
+
+                tv_valor_proximo.text = result.valor_estimado_proximo_concurso
+
+            } else {
+                Toast.makeText(context, "Ocorreu um erro!", Toast.LENGTH_LONG).show()
             }
-
-        })
-
+        }
     }
-
 }

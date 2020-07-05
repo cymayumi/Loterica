@@ -2,28 +2,29 @@ package com.mayumi.loterica.service
 
 import com.mayumi.loterica.model.*
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.GET
 
 interface WebAPI {
 
-    @GET("?loteria=megasena&token=g3VTwTAWMNuQR0C")
-    fun resultMega(): Call<Mega>
+    @GET("resultado?loteria=megasena&token=g3VTwTAWMNuQR0C")
+    suspend fun resultMega(): Response<Mega>
 
-    @GET("?loteria=quina&token=g3VTwTAWMNuQR0C")
-    fun resultQuina(): Call<Quina>
+    @GET("resultado?loteria=quina&token=g3VTwTAWMNuQR0C")
+    suspend fun resultQuina(): Response<Quina>
 
-    @GET("?loteria=lotofacil&token=g3VTwTAWMNuQR0C")
-    fun resultFacil(): Call<Facil>
+    @GET("resultado?loteria=lotofacil&token=g3VTwTAWMNuQR0C")
+    suspend fun resultFacil(): Response<Facil>
 
-    @GET("?loteria=lotomania&token=g3VTwTAWMNuQR0C")
-    fun resultMania(): Call<Mania>
+    @GET("resultado?loteria=lotomania&token=g3VTwTAWMNuQR0C")
+    suspend fun resultMania(): Response<Mania>
 
-    @GET ("?loteria=duplasena&token=g3VTwTAWMNuQR0C")
-    fun resultDupla(): Call<Dupla>
+    @GET ("resultado?loteria=duplasena&token=g3VTwTAWMNuQR0C")
+    suspend fun resultDupla(): Response<Dupla>
 
-    @GET("?loteria=timemania&token=g3VTwTAWMNuQR0C")
-    fun resultTime(): Call<Time>
+    @GET("resultado?loteria=timemania&token=g3VTwTAWMNuQR0C")
+    suspend fun resultTime(): Response<Time>
 
-    @GET("?loteria=diadesorte&token=g3VTwTAWMNuQR0C")
-    fun resultDia(): Call<Dia>
+    @GET("resultado?loteria=diadesorte&token=g3VTwTAWMNuQR0C")
+    suspend fun resultDia(): Response<Dia>
 }

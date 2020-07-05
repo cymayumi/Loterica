@@ -40,61 +40,63 @@ class FacilFrag : Fragment() {
     }
 
     private fun resultadoFacil() {
-        val destinationService = ServiceBuilder.buildService(WebAPI::class.java)
-        val requestCall = destinationService.resultFacil()
+        /*  val destinationService = ServiceBuilder.buildService(WebAPI::class.java)
+         val requestCall = destinationService.resultFacil()
 
-        requestCall.enqueue(object : Callback<Facil> {
+         requestCall.enqueue(object : Callback<Facil> {
 
-            override fun onResponse(call: Call<Facil>, response: Response<Facil>) {
-                if (isAdded && response.isSuccessful) {
-                    val result = response.body()!!
+             override fun onResponse(call: Call<Facil>, response: Response<Facil>) {
+                 if (isAdded && response.isSuccessful) {
+                     val result = response.body()!!
                     tv_num_concurso.text = result.concurso.numero
-                    tv_cidade_concurso.text = result.concurso.cidade
+                     tv_cidade_concurso.text = result.concurso.cidade
 
-                    tv_ganhadores_15.text = result.concurso.premiacao.acertos_15.ganhadores
-                    tv_valor_15.text = result.concurso.premiacao.acertos_15.valor_pago
+                     tv_ganhadores_15.text = result.concurso.premiacao.acertos_15.ganhadores
+                     tv_valor_15.text = result.concurso.premiacao.acertos_15.valor_pago
 
-                    tv_ganhadores_14.text = result.concurso.premiacao.acertos_14.ganhadores
-                    tv_valor_14.text = result.concurso.premiacao.acertos_14.valor_pago
+                     tv_ganhadores_14.text = result.concurso.premiacao.acertos_14.ganhadores
+                     tv_valor_14.text = result.concurso.premiacao.acertos_14.valor_pago
 
-                    tv_ganhadores_13.text = result.concurso.premiacao.acertos_13.ganhadores
-                    tv_valor_13.text = result.concurso.premiacao.acertos_13.valor_pago
+                     tv_ganhadores_13.text = result.concurso.premiacao.acertos_13.ganhadores
+                     tv_valor_13.text = result.concurso.premiacao.acertos_13.valor_pago
 
-                    tv_ganhadores_12.text = result.concurso.premiacao.acertos_12.ganhadores
-                    tv_valor_12.text = result.concurso.premiacao.acertos_12.valor_pago
+                     tv_ganhadores_12.text = result.concurso.premiacao.acertos_12.ganhadores
+                     tv_valor_12.text = result.concurso.premiacao.acertos_12.valor_pago
 
-                    tv_ganhadores_11.text = result.concurso.premiacao.acertos_11.ganhadores
-                    tv_valor_11.text = result.concurso.premiacao.acertos_11.valor_pago
+                     tv_ganhadores_11.text = result.concurso.premiacao.acertos_11.ganhadores
+                     tv_valor_11.text = result.concurso.premiacao.acertos_11.valor_pago
 
-                    tv_data.text = result.proximo_concurso.data
-                    tv_valor_proximo.text = result.proximo_concurso.valor_estimado
+                     tv_data.text = result.proximo_concurso.data
+                     tv_valor_proximo.text = result.proximo_concurso.valor_estimado
 
-                    val dezenas = result.concurso.dezenas
+                     val dezenas = result.concurso.dezenas
 
-                    tv_1.text = formatar(dezenas[0].toString())
-                    tv_2.text = formatar(dezenas[1].toString())
-                    tv_3.text = formatar(dezenas[2].toString())
-                    tv_4.text = formatar(dezenas[3].toString())
-                    tv_5.text = formatar(dezenas[4].toString())
-                    tv_6.text = formatar(dezenas[5].toString())
-                    tv_7.text = formatar(dezenas[6].toString())
-                    tv_8.text = formatar(dezenas[7].toString())
-                    tv_9.text = formatar(dezenas[8].toString())
-                    tv_10.text = formatar(dezenas[9].toString())
-                    tv_11.text = formatar(dezenas[10].toString())
-                    tv_12.text = formatar(dezenas[11].toString())
-                    tv_13.text = formatar(dezenas[12].toString())
-                    tv_14.text = formatar(dezenas[13].toString())
-                    tv_15.text = formatar(dezenas[14].toString())
-                }
-            }
+                     tv_1.text = formatar(dezenas[0].toString())
+                     tv_2.text = formatar(dezenas[1].toString())
+                     tv_3.text = formatar(dezenas[2].toString())
+                     tv_4.text = formatar(dezenas[3].toString())
+                     tv_5.text = formatar(dezenas[4].toString())
+                     tv_6.text = formatar(dezenas[5].toString())
+                     tv_7.text = formatar(dezenas[6].toString())
+                     tv_8.text = formatar(dezenas[7].toString())
+                     tv_9.text = formatar(dezenas[8].toString())
+                     tv_10.text = formatar(dezenas[9].toString())
+                     tv_11.text = formatar(dezenas[10].toString())
+                     tv_12.text = formatar(dezenas[11].toString())
+                     tv_13.text = formatar(dezenas[12].toString())
+                     tv_14.text = formatar(dezenas[13].toString())
+                     tv_15.text = formatar(dezenas[14].toString())
 
-            override fun onFailure(call: Call<Facil>, t: Throwable) {
-                if (isAdded) {
-                    Toast.makeText(context, "Ocorreu um erro!", Toast.LENGTH_LONG).show()
-                }
-            }
-        })
+
+                 }
+             }
+
+             override fun onFailure(call: Call<Facil>, t: Throwable) {
+                 if (isAdded) {
+                     Toast.makeText(context, "Ocorreu um erro!", Toast.LENGTH_LONG).show()
+                 }
+             }
+         })*/
 
     }
 }
