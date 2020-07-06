@@ -628,17 +628,12 @@
 
                 <TextView
                         android:id="@+id/tv_valor_proximo"
-                        tools:text="10.000.000"
                         android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
+                        android:textAlignment="center"
+                        tools:text="10.000.000" />
 
-                <TextView
-                        android:id="@+id/tv_data"
-                        tools:text="...."
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

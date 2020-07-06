@@ -8,24 +8,33 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.mayumi.loterica.R
 import com.mayumi.loterica.util.formatar
-import com.mayumi.loterica.model.Quina
 import com.mayumi.loterica.service.ServiceBuilder
 import com.mayumi.loterica.service.WebAPI
 import kotlinx.android.synthetic.main.quina_fragment.*
+import kotlinx.android.synthetic.main.quina_fragment.tv_1
+import kotlinx.android.synthetic.main.quina_fragment.tv_2
+import kotlinx.android.synthetic.main.quina_fragment.tv_3
+import kotlinx.android.synthetic.main.quina_fragment.tv_4
+import kotlinx.android.synthetic.main.quina_fragment.tv_5
 import kotlinx.android.synthetic.main.quina_fragment.tv_cidade_concurso
-import kotlinx.android.synthetic.main.quina_fragment.tv_data
 import kotlinx.android.synthetic.main.quina_fragment.tv_ganhadores_quadra
 import kotlinx.android.synthetic.main.quina_fragment.tv_ganhadores_quina
 import kotlinx.android.synthetic.main.quina_fragment.tv_num_concurso
 import kotlinx.android.synthetic.main.quina_fragment.tv_valor_proximo
 import kotlinx.android.synthetic.main.quina_fragment.tv_valor_quadra
 import kotlinx.android.synthetic.main.quina_fragment.tv_valor_quina
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import kotlinx.coroutines.*
 
 class QuinaFrag : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
+    private val viewModelJob = Job()
+    private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.quina_fragment, container, false)
     }
 
@@ -44,48 +53,40 @@ class QuinaFrag : Fragment() {
     }
 
     private fun resultadoQuina() {
-        /*    val destinationService = ServiceBuilder.buildService(WebAPI::class.java)
-          val requestCall = destinationService.resultQuina()
+        uiScope.launch {
+            val response = withContext(Dispatchers.IO) {
+                val destinationService = ServiceBuilder.buildService(WebAPI::class.java)
+                return@withContext destinationService.resultQuina()
+            }
 
-          requestCall.enqueue(object : Callback<Quina> {
+            if (response.isSuccessful) {
+                val result = response.body()!!
 
-              override fun onResponse(call: Call<Quina>, response: Response<Quina>) {
-                  if (isAdded && response.isSuccessful) {
-                      val result = response.body()!!
-                    tv_num_concurso.text = result.concurso.numero
-                      tv_cidade_concurso.text = result.concurso.cidade
+                tv_num_concurso.text = result.numero_concurso
+                tv_cidade_concurso.text = result.local_realizacao
 
-                      tv_valor_quina.text = result.concurso.premiacao.quina.valor_pago
-                      tv_ganhadores_quina.text = result.concurso.premiacao.quina.ganhadores
+                val dezenas = result.dezenas
+                tv_1.text = formatar(dezenas[0].toString())
+                tv_2.text = formatar(dezenas[1].toString())
+                tv_3.text = formatar(dezenas[2].toString())
+                tv_4.text = formatar(dezenas[3].toString())
+                tv_5.text = formatar(dezenas[4].toString())
 
-                      tv_valor_quadra.text = result.concurso.premiacao.quadra.valor_pago
-                      tv_ganhadores_quadra.text = result.concurso.premiacao.quadra.ganhadores
+                tv_ganhadores_quina.text = result.premiacao[0].quantidade_ganhadores
+                tv_ganhadores_quadra.text = result.premiacao[1].quantidade_ganhadores
+                tv_ganhadores_terno.text = result.premiacao[2].quantidade_ganhadores
+                tv_ganhadores_duque.text = result.premiacao[3].quantidade_ganhadores
 
-                      tv_valor_terno.text = result.concurso.premiacao.terno.valor_pago
-                      tv_ganhadores_terno.text = result.concurso.premiacao.terno.ganhadores
+                tv_valor_quina.text = result.premiacao[0].valor_total
+                tv_valor_quadra.text = result.premiacao[1].valor_total
+                tv_valor_terno.text = result.premiacao[2].valor_total
+                tv_valor_duque.text = result.premiacao[3].valor_total
 
-                      tv_valor_duque.text = result.concurso.premiacao.duque.valor_pago
-                      tv_ganhadores_duque.text = result.concurso.premiacao.duque.ganhadores
+                tv_valor_proximo.text = result.valor_estimado_proximo_concurso
 
-                      tv_data.text = result.proximo_concurso.data
-                      tv_valor_proximo.text = result.proximo_concurso.valor_estimado
-
-                      val dezenas = result.concurso.dezenas
-                      tv_1.text = formatar(dezenas[0].toString())
-                      tv_2.text = formatar(dezenas[1].toString())
-                      tv_3.text = formatar(dezenas[2].toString())
-                      tv_4.text = formatar(dezenas[3].toString())
-                      tv_5.text = formatar(dezenas[4].toString())
-
-                  }
-              }
-
-              override fun onFailure(call: Call<Quina>, t: Throwable) {
-                  if (isAdded) {
-                      Toast.makeText(context, "Ocorreu um erro!", Toast.LENGTH_LONG).show()
-                  }
-              }
-          })*/
-
+            } else {
+                Toast.makeText(context, "Ocorreu um erro!", Toast.LENGTH_LONG).show()
+            }
+        }
     }
 }
