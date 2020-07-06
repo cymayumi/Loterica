@@ -607,34 +607,26 @@
                         android:layout_height="wrap_content"/>
             </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:orientation="vertical"
-                      android:background="@drawable/borda_results_2"
-                      android:padding="8dp"
-                      android:layout_marginTop="5dp">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/borda_results_2"
+                android:orientation="vertical"
+                android:padding="8dp">
 
             <TextView
-                    android:text="@string/proximo_sorteio"
-                    android:textSize="20sp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:text="@string/proximo_sorteio"
+                    android:textSize="20sp"/>
 
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:orientation="horizontal"
-                          android:padding="8dp">
-
-                <TextView
-                        android:id="@+id/tv_valor_proximo"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
-                        tools:text="10.000.000" />
-
-            </LinearLayout>
+            <TextView
+                    android:id="@+id/tv_valor_proximo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    tools:text="10.000.000"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
