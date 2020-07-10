@@ -108,4 +108,8 @@ class ManiaFrag : Fragment() {
             }
         }
     }
+    override fun onDetach() {
+        super.onDetach()
+        viewModelJob.cancel()
+    }
 }

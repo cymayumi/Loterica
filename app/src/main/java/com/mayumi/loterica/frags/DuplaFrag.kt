@@ -105,4 +105,8 @@ class DuplaFrag : Fragment() {
             }
         }
     }
+    override fun onDetach() {
+        super.onDetach()
+        viewModelJob.cancel()
+    }
 }

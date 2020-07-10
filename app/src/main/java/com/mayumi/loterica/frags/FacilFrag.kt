@@ -99,4 +99,8 @@ class FacilFrag : Fragment() {
             }
         }
     }
+    override fun onDetach() {
+        super.onDetach()
+        viewModelJob.cancel()
+    }
 }

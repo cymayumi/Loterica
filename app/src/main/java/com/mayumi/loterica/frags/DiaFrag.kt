@@ -87,4 +87,9 @@ class DiaFrag : Fragment() {
             }
         }
     }
+
+    override fun onDetach() {
+        super.onDetach()
+        viewModelJob.cancel()
+    }
 }
