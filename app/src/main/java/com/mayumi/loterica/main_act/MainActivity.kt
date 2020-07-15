@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             val fragment = JogosFragment()
             supportFragmentManager.beginTransaction()
-                .add(R.id.container, fragment, fragment.javaClass.simpleName)
+                .replace(R.id.container, fragment, fragment.javaClass.simpleName)
                 .commit()
         }
     }
