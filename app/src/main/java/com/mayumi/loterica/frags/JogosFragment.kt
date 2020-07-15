@@ -87,4 +87,10 @@ class JogosFragment : Fragment() {
 
     private fun initActions() {
     }
+
+    companion object{
+        fun newInstance(): JogosFragment{
+            return JogosFragment()
+        }
+    }
 }

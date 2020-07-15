@@ -13,13 +13,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
         if (savedInstanceState == null) {
-            val fragment = JogosFragment()
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, fragment, fragment.javaClass.simpleName)
+                .replace(R.id.container, JogosFragment.newInstance())
                 .commit()
         }
     }
@@ -27,23 +27,20 @@ class MainActivity : AppCompatActivity() {
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_jogos -> {
-                val fragment = JogosFragment()
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, fragment, fragment.javaClass.simpleName)
+                    .replace(R.id.container, JogosFragment.newInstance())
                     .commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_resultados -> {
-                val fragment = ResultadosFragment()
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, fragment, fragment.javaClass.simpleName)
+                    .replace(R.id.container, ResultadosFragment.newInstance())
                     .commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_info -> {
-                val fragment = InfoFragment()
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, fragment, fragment.javaClass.simpleName)
+                    .replace(R.id.container, InfoFragment.newInstance())
                     .commit()
                 return@OnNavigationItemSelectedListener true
             }

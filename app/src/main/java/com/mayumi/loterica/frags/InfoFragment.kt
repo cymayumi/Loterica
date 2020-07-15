@@ -104,4 +104,11 @@ class InfoFragment : Fragment() {
 
         }
     }
+
+    companion object{
+
+        fun newInstance(): InfoFragment{
+            return InfoFragment()
+        }
+    }
 }

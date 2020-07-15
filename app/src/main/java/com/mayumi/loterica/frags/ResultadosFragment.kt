@@ -31,4 +31,10 @@ class ResultadosFragment : Fragment() {
     private fun initActions() {
 
     }
+
+    companion object{
+        fun newInstance(): ResultadosFragment{
+            return ResultadosFragment()
+        }
+    }
 }
