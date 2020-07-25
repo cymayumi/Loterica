@@ -6,16 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-
-import com.mayumi.loterica.model.Mega
 import com.mayumi.loterica.service.ServiceBuilder
 import com.mayumi.loterica.service.WebAPI
 import kotlinx.android.synthetic.main.mega_fragment.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import com.mayumi.loterica.util.formatar
-import android.R.string.cancel
 import kotlinx.coroutines.*
 
 

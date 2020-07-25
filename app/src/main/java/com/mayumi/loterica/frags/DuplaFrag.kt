@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.mayumi.loterica.model.Dupla
 import com.mayumi.loterica.service.ServiceBuilder
 import com.mayumi.loterica.service.WebAPI
 import com.mayumi.loterica.util.formatar
@@ -20,11 +19,7 @@ import kotlinx.android.synthetic.main.dupla_fragment.tv_6
 import kotlinx.android.synthetic.main.dupla_fragment.tv_cidade_concurso
 import kotlinx.android.synthetic.main.dupla_fragment.tv_num_concurso
 import kotlinx.android.synthetic.main.dupla_fragment.tv_valor_proximo
-import kotlinx.android.synthetic.main.mega_fragment.*
 import kotlinx.coroutines.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class DuplaFrag : Fragment() {
 
