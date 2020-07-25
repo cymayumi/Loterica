@@ -1,3 +1,4 @@
+
 package com.mayumi.loterica.model
 
 class Dia(

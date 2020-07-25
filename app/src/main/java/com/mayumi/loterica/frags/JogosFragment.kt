@@ -89,6 +89,7 @@ class JogosFragment : Fragment() {
     }
 
     companion object{
+        //como não podemos instanciar um fragmento diretamente, criamos esta função que retorna o fragmento desejado
         fun newInstance(): JogosFragment{
             return JogosFragment()
         }
